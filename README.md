@@ -9,7 +9,7 @@ pip install ongeki-scraper
 ```
 pip install chunithm-scraper
 ```
-必須:bs4  
+必須 : requests, bs4  
 ## セッションは1つまでしか作れません
 他のブラウザーウィンドウなどでログインすると、今までのセッションは破棄されます  
 ## セッションは短命です
