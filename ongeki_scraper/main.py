@@ -49,7 +49,10 @@ class ONGEKI():
                 "save_cookie": "save_cookie"
             }
             self.session.get(ONGEKI_MOBILE)
-            login_form["token"]=self.session.cookies["_t"]
+            try:
+                login_form["token"]=self.session.cookies["_t"]
+            except:
+                raise ONGEKIError("現在メンテナンス中です")
             self.session.post(ONGEKI_MOBILE+"submit",data=login_form)
             aime_list=self.session.get(ONGEKI_MOBILE+"aimeList")
             if aime_list.status_code==302:
@@ -66,10 +69,7 @@ class ONGEKI():
 
             self.session.get(ONGEKI_MOBILE+"aimeList/submit/?idx=0")
             homo=self.session.get(ONGEKI_MOBILE+"home/playerDataDetail")
-            try:
-                self.token=self.session.cookies["_t"]
-            except:
-                ONGEKIError("現在メンテナンス中です")
+            self.token=self.session.cookies["_t"]
             self.user_id=self.session.cookies["userId"]
 
         soup=BeautifulSoup(homo.content,"html.parser")

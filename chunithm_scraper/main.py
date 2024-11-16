@@ -48,7 +48,10 @@ class CHUNITHM():
                 "save_cookie": "save_cookie"
             }
             self.session.get(CHUNITHM_MOBILE)
-            login_form["token"]=self.session.cookies["_t"]
+            try:
+                login_form["token"]=self.session.cookies["_t"]
+            except:
+                raise CHUNITHMError("現在メンテナンス中です")
             self.session.post(CHUNITHM_MOBILE+"submit",data=login_form)
             aime_list=self.session.get(CHUNITHM_MOBILE+"aimeList")
             if aime_list.status_code==302:
@@ -62,10 +65,7 @@ class CHUNITHM():
             else:
                 self.course="無料"
 
-            try:
-                self.token=self.session.cookies["_t"]
-            except:
-                CHUNITHMError("現在メンテナンス中です")
+            self.token=self.session.cookies["_t"]
             self.session.post(CHUNITHM_MOBILE+"aimeList/submit",data={"idx":"0","token":self.token})
             homo=self.session.get(CHUNITHM_MOBILE+"home/playerData")
             self.php_sess_id=self.session.cookies["PHPSESSID"]
