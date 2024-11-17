@@ -79,27 +79,37 @@ print(playlog_score_detail.side_hold)#サイドホールド
 ### それ以外の返り値
 ##### レーティング対象曲 / プレイ履歴  
 ```
-{'title': 'きゅうくらりん', 'level': '14', 'difficulty': 'Master', 'technical_score': '994,198', 'technical_score_int': 994198, 'idx': 'tD6VKJAiSJqbOH2pSJJjTON434ODt50u7C9krAwAFPPhowOm3tEW0atNrTgLAIWzQ7YaMdJxKOGOxp3urrR%2BtA%3D%3D'}
+{'title': 'きゅうくらりん', 'level': '14', 'difficulty': 'Master', 'technical_score': '994,198', 'technical_score_int': 994198,
+'idx': 'tD6VKJAiSJqbOH2pSJJjTON434ODt50u7C9krAwAFPPhowOm3tEW0atNrTgLAIWzQ7YaMdJxKOGOxp3urrR%2BtA%3D%3D'}
 ```
 dictの中に簡易的な説明が入ってるので単にテクニカルスコアだけ知りたい場合、スコアの詳細を取得しなくてもだいじょうぶ  
 ##### 全曲
 プレイ済み
 ```
-'Cutter':{'idx': 'hEr/DTD/cn70Wlvr%2BQXFdJoAZQxOqZI6ohty6tyx8O4AhuqhZKYBKf5H8/prgd3Zh72wyfQG6oVFQqNuErzKcA%3D%3D', 'battle_score': '302.01%', 'over_damage': '9,752,464', 'technical_score': '1,003,145'}
+'Cutter':{'idx': 'hEr/DTD/cn70Wlvr%2BQXFdJoAZQxOqZI6ohty6tyx8O4AhuqhZKYBKf5H8/prgd3Zh72wyfQG6oVFQqNuErzKcA%3D%3D',
+'battle_score': '302.01%', 'over_damage': '9,752,464', 'technical_score': '1,003,145'}
 ```  
 未プレイ  
 ```
-'Recollect Lines':{'idx': 'G4LE%2BayGWh88q9ziJBDOyQuZRl088qgKmAFN0hAWbd5C/UEBmGISVIASZyJJpCqSovY7EODj6EjGbMUeal/zTw%3D%3D', 'battle_score': None, 'over_damage': None, 'technical_score': None}
+'Recollect Lines':{'idx': 'G4LE%2BayGWh88q9ziJBDOyQuZRl088qgKmAFN0hAWbd5C/UEBmGISVIASZyJJpCqSovY7EODj6EjGbMUeal/zTw%3D%3D',
+'battle_score': None, 'over_damage': None, 'technical_score': None}
 ```
 dict in dictになっているため、```all_music["曲名"]``` でidxやスコアを確認できる  
 #### スコア詳細
 ```
-SCORE_DETAILS(MASTER_level='13+', MASTER_last_played='2024/11/11 20:28', MASTER_play_count='31', MASTER_over_damage='298.52%', MASTER_battle_score='9,730,844', MASTER_technical_score='998,888', MASTER_icon_battle_rank='https://ongeki-net.com/ongeki-mobile/img/music_icon_br_great.png?ver=1.45.0', MASTER_icon_technical_rank='https://ongeki-net.com/ongeki-mobile/img/music_icon_tr_ss.png?ver=1.45.0', MASTER_icon_bell='https://ongeki-net.com/ongeki-mobile/img/music_icon_fb.png', MASTER_icon_combo='https://ongeki-net.com/ongeki-mobile/img/music_icon_back.png', EXPERT_level='12', EXPERT_last_played='2024/09/26 19:03', EXPERT_play_count='17', EXPERT_over_damage='303.69%', EXPERT_battle_score='9,396,988', EXPERT_technical_score='1,007,995', EXPERT_icon_battle_rank='https://ongeki-net.com/ongeki-mobile/img/music_icon_br_excellent.png?ver=1.45.0', EXPERT_icon_technical_rank='https://ongeki-net.com/ongeki-mobile/img/music_icon_tr_sssplus.png?ver=1.45.0', EXPERT_icon_bell='https://ongeki-net.com/ongeki-mobile/img/music_icon_fb.png', EXPERT_icon_combo='https://ongeki-net.com/ongeki-mobile/img/music_icon_fc.png?ver=1.45.0', LUNATIC_level=None, LUNATIC_last_played=None, LUNATIC_play_count=None, LUNATIC_over_damage=None, LUNATIC_battle_score=None, LUNATIC_technical_score=None, LUNATIC_icon_battle_rank=None, LUNATIC_icon_technical_rank=None, LUNATIC_icon_bell=None, LUNATIC_icon_combo=None, music_img='https://ongeki-net.com/ongeki-mobile/img/music/c159c9bee6a1fb73.png', music_title='Cyaegha', music_genre='VARIETY', music_artist='USAO「Arcaea」', music_enemy='光 Lv.35')
+SCORE_DETAILS(
+MASTER_level='13+', MASTER_last_played='2024/11/11 20:28', MASTER_play_count='31', MASTER_over_damage='298.52%', MASTER_battle_score='9,730,844', MASTER_technical_score='998,888', MASTER_icon_battle_rank='https://ongeki-net.com/ongeki-mobile/img/music_icon_br_great.png?ver=1.45.0', MASTER_icon_technical_rank='https://ongeki-net.com/ongeki-mobile/img/music_icon_tr_ss.png?ver=1.45.0', MASTER_icon_bell='https://ongeki-net.com/ongeki-mobile/img/music_icon_fb.png', MASTER_icon_combo='https://ongeki-net.com/ongeki-mobile/img/music_icon_back.png',
+EXPERT_level='12', EXPERT_last_played='2024/09/26 19:03', EXPERT_play_count='17', EXPERT_over_damage='303.69%', EXPERT_battle_score='9,396,988', EXPERT_technical_score='1,007,995', EXPERT_icon_battle_rank='https://ongeki-net.com/ongeki-mobile/img/music_icon_br_excellent.png?ver=1.45.0', EXPERT_icon_technical_rank='https://ongeki-net.com/ongeki-mobile/img/music_icon_tr_sssplus.png?ver=1.45.0', EXPERT_icon_bell='https://ongeki-net.com/ongeki-mobile/img/music_icon_fb.png', EXPERT_icon_combo='https://ongeki-net.com/ongeki-mobile/img/music_icon_fc.png?ver=1.45.0',
+LUNATIC_level=None, LUNATIC_last_played=None, LUNATIC_play_count=None, LUNATIC_over_damage=None, LUNATIC_battle_score=None, LUNATIC_technical_score=None, LUNATIC_icon_battle_rank=None, LUNATIC_icon_technical_rank=None, LUNATIC_icon_bell=None, LUNATIC_icon_combo=None, music_img='https://ongeki-net.com/ongeki-mobile/img/music/c159c9bee6a1fb73.png',
+music_title='Cyaegha', music_genre='VARIETY', music_artist='USAO「Arcaea」', music_enemy='光 Lv.35')
 ```  
 レベル別になってるので長い、プレイしていないレベルは```None```
 #### プレイ履歴のスコア詳細  
 ```
-SCORE_DETAILS(played='2024/11/11 20:34', music_img='https://ongeki-net.com/ongeki-mobile/img/music/5ab5414aa44d6a03.png', music_title='Knight Rider', music_battle_score='9,282,581', music_over_damage='323.16％', music_technical_score='986,641', max_combo='731', critical_break='1,149', ongeki_break='128', hit='39', miss='4', bell='117/117', damage='4', music_difficulty='Master', tap='95%', hold='99%', flick='99%', side_tap='96%', side_hold='100%')
+SCORE_DETAILS(
+played='2024/11/11 20:34', music_img='https://ongeki-net.com/ongeki-mobile/img/music/5ab5414aa44d6a03.png', music_title='Knight Rider',
+music_battle_score='9,282,581', music_over_damage='323.16％', music_technical_score='986,641',
+max_combo='731',critical_break='1,149', ongeki_break='128', hit='39', miss='4', bell='117/117', damage='4', music_difficulty='Master', tap='95%', hold='99%', flick='99%', side_tap='96%', side_hold='100%')
 ```
 こっちはブレイク数やタップの詳細なども取得できる  
 
@@ -161,7 +171,8 @@ print(playlog_score_detail.flick)#フリック
 ### それ以外の返り値
 ##### レーティング対象曲 / プレイ履歴  
 ```
-{'title': 'MEGALOVANIA', 'difficulty': 'Expert', 'score': '985,342', 'score_int': 985342, 'diff': '2', 'genre': '99', 'idx': '2137', 'token': 'fad775feb5e372ffa4b3d6c584422e3a'}
+{'title': 'MEGALOVANIA', 'difficulty': 'Expert', 'score': '985,342', 'score_int': 985342,
+'diff': '2', 'genre': '99', 'idx': '2137', 'token': 'fad775feb5e372ffa4b3d6c584422e3a'}
 ```
 dictの中に簡易的な説明が入ってるので単にテクニカルスコアだけ知りたい場合、スコアの詳細を取得しなくてもだいじょうぶ  
 ##### 全曲
@@ -176,12 +187,21 @@ dictの中に簡易的な説明が入ってるので単にテクニカルスコ�
 dict in dictになっているため、```all_music["曲名"]``` でidxとtokenやスコアを確認できる  
 #### スコア詳細
 ```
-SCORE_DETAILS(MASTER_play_count=None, MASTER_score=None, MASTER_icon_rank=None, MASTER_icon_combo=None, MASTER_icon_clear=None, EXPERT_play_count='1回', EXPERT_score='985,342', EXPERT_icon_rank='https://new.chunithm-net.com/chuni-mobile/html/mobile/images/icon_rank_8.png', EXPERT_icon_combo='https://new.chunithm-net.com/chuni-mobile/html/mobile/images/icon_rank_8.png', EXPERT_icon_clear='https://new.chunithm-net.com/chuni-mobile/html/mobile/images/icon_clear.png', ULTIMA_play_count=None, ULTIMA_score=None, ULTIMA_icon_rank=None, ULTIMA_icon_combo=None, ULTIMA_icon_clear=None, music_img='https://new.chunithm-net.com/chuni-mobile/html/mobile/img/f7b116709baab037.jpg', music_title='MEGALOVANIA', music_artist='Toby Fox「UNDERTALE」')
+SCORE_DETAILS(
+MASTER_play_count=None, MASTER_score=None, MASTER_icon_rank=None, MASTER_icon_combo=None, MASTER_icon_clear=None,
+EXPERT_play_count='1回', EXPERT_score='985,342', EXPERT_icon_rank='https://new.chunithm-net.com/chuni-mobile/html/mobile/images/icon_rank_8.png', EXPERT_icon_combo='https://new.chunithm-net.com/chuni-mobile/html/mobile/images/icon_rank_8.png', EXPERT_icon_clear='https://new.chunithm-net.com/chuni-mobile/html/mobile/images/icon_clear.png',
+ULTIMA_play_count=None,ULTIMA_score=None, ULTIMA_icon_rank=None, ULTIMA_icon_combo=None, ULTIMA_icon_clear=None,
+music_img='https://new.chunithm-net.com/chuni-mobile/html/mobile/img/f7b116709baab037.jpg', music_title='MEGALOVANIA', music_artist='Toby Fox「UNDERTALE」')
 ```  
 レベル別になってるので長い、プレイしていないレベルは```None```
 #### プレイ履歴のスコア詳細  
 ```
-SCORE_DETAILS(music_played='2024/11/11 20:46', music_img='https://new.chunithm-net.com/chuni-mobile/html/mobile/img/94e81ba6b24960b8.jpg', music_title='8OROCHI', music_score='990,754', music_difficulty='Expert', character='藤沢 柚子／デイドリーム・フェアリーズ', skill='オールガード【LMN】', max_combo='567', justice_critical='1,302', justice='122', attack='15', miss='19', tap='97.43%', hold='100.97%', slide='100.34%', air='100.84%', flick='0.00%', icon_clear='https://new.chunithm-net.com/chuni-mobile/html/mobile/images/icon_clear.png', icon_rank='https://new.chunithm-net.com/chuni-mobile/html/mobile/images/icon_rank_9.png', icon_combo='https://new.chunithm-net.com/chuni-mobile/html/mobile/images/icon_rank_9.png')
+SCORE_DETAILS(
+music_played='2024/11/11 20:46', music_img='https://new.chunithm-net.com/chuni-mobile/html/mobile/img/94e81ba6b24960b8.jpg',
+music_title='8OROCHI', music_score='990,754', music_difficulty='Expert', character='藤沢 柚子／デイドリーム・フェアリーズ', skill='オールガード【LMN】',
+max_combo='567', justice_critical='1,302', justice='122', attack='15', miss='19', tap='97.43%', hold='100.97%', slide='100.34%', air='100.84%', flick='0.00%',
+icon_clear='https://new.chunithm-net.com/chuni-mobile/html/mobile/images/icon_clear.png', icon_rank='https://new.chunithm-net.com/chuni-mobile/html/mobile/images/icon_rank_9.png',
+icon_combo='https://new.chunithm-net.com/chuni-mobile/html/mobile/images/icon_rank_9.png')
 ```
 こっちは使用キャラクター、スキル、ジャスティスやエアーの詳細なども取得できる  
 ### もう少し知る
