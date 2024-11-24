@@ -74,7 +74,7 @@ class ONGEKI():
 
         soup=BeautifulSoup(homo.content,"html.parser")
         self.name=soup.find(class_="name_block f_15").find("span").text
-        self.plate=soup.find(class_="trophy_block trophy_1 f_11 f_b").find("span").text
+        self.plate=soup.find(class_="trophy_block").find("span").text
 
         rating_field=soup.find(class_="rating_field t_l")
         self.rating=float(rating_field.find("span").text)
