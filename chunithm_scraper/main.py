@@ -82,7 +82,7 @@ class CHUNITHM():
             rating_nums=rating_nums+rating_num
         
         self.rating=float(rating_nums)
-        self.raiting_max=float(soup.find(class_="player_rating_max").text)
+        #self.raiting_max=float(soup.find(class_="player_rating_max").text) 突然消えた
         self.leveling=int(soup.find(class_="player_lv").text)
         reincarnation=soup.find(class_="player_reborn")
         if reincarnation:
