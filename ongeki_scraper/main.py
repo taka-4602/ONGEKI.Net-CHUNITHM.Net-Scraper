@@ -78,8 +78,8 @@ class ONGEKI():
 
         rating_field=soup.find(class_="rating_field t_l")
         self.rating=float(rating_field.find("span").text)
-
-        self.raiting_max=float(soup.find(class_="rating_block f_14").find(class_="f_11").text.replace("（MAX ","").replace("）",""))
+        #self.raiting_max=float(soup.find("span").find(class_="f_11").text.replace("（MAX ","").replace("）",""))
+        self.raiting_max=float(soup.find_all("span")[-1].text.replace("（MAX ","").replace("）",""))
         self.leveling=int(soup.find(class_="lv_block white").find("span").text)
         reincarnation=soup.find(class_="reincarnation_block")
         if reincarnation:
@@ -132,8 +132,14 @@ class ONGEKI():
         for music in soup.find_all(action="https://ongeki-net.com/ongeki-mobile/record/musicDetail/"):
             title=music.find(class_="music_label p_5 break").text
             level=music.find(class_="score_level t_c").text
-            score_str=music.find(class_="f_14 l_h_12").text
-            score_int=int(score_str.replace(",",""))
+            try:
+                score_str=music.find(class_="f_14 l_h_12").text
+                score_int=int(score_str.replace(",",""))
+            except:
+                score_str=music.find(class_="platinum_score_text_block").text
+                score_int=int(score_str.split(" / ")[0].replace(",",""))
+
+            
             difficulty_image=music.find("img").find_next().find_next()["src"]
             if "master" in difficulty_image:
                 difficulty="Master"
