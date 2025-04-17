@@ -269,5 +269,5 @@ reachable = round(average*0.75 + rate_all[0]*0.25, 2)
 これで到達可能レートが計算できるらしい、ただレベルはもちろん譜面定数が必要だけど。  
 譜面定数はまた他のサイトをスクレイピングしてデータベースに保存して、そこから参照するしかない...  
 ## コンタクト  
-Discord サーバー / https://discord.gg/aSyaAK7Ktm  
+Discord サーバー / https://discord.gg/YdrTY2JPR2  
 Discord ユーザー名 / .taka.   
