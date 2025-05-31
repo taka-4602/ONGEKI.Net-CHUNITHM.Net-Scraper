@@ -97,7 +97,7 @@ class CHUNITHM():
             self.overpower=0
         
         self.last_play=soup.find(class_="player_lastplaydate_text").text
-        self.battle_rank=soup.find(class_="player_battlerank").find("img")["src"].split("battlerank_")[1].replace(".png","")
+        self.battle_rank=soup.find(class_="player_battlerank").find("img")["src"]#.split("battlerank_")[1].replace(".png","")
         self.icon=soup.find(class_="player_chara").find("img")["src"]
         #self.character=soup.find(class_="player_chara").find("img")["src"]
         self.money=soup.find(class_="user_data_point").find(class_="user_data_text").text
